@@ -75,9 +75,9 @@ layout: base
       </form>
 
 <!--Below is code to validate the script and prevent hacked entries-->
-      <script src="scripts/gen_validatorv31.js">
+   <script src="scripts/gen_validatorv31.js"></script>
+   <script type="text/jacascript">
     var frmvalidator  = new Validator("3Dprintingappt");
     frmvalidator.addValidation("name","req","Please provide your name"); 
     frmvalidator.addValidation("visitor_email","req","Please provide your email"); 
     frmvalidator.addValidation("visitor_email","email","Please enter a valid email address"); 
-    </script>
