@@ -12,24 +12,24 @@ layout: base
       
   <div class="form-group">
     <label for="exampleInputEmail1">Full Name</label>
-    <input type="text" name="name" class="form-control" placeholder="Full Name">
+    <input type="text" id="exampleInputEmail1" name="name" class="form-control" placeholder="Full Name">
   </div>
           
   <div class="form-group">
     <label for="exampleInputPassword1">E-mail Address</label>
-    <input type="email" name="visitor_email" class="form-control" placeholder="me@my.dom.edu">
+    <input type="email" id="exampleInputPassword1" name="visitor_email" class="form-control" placeholder="me@my.dom.edu">
   </div>
      
 <div class="form-row">
     
   <div class="form-group col-md-6">
     <label for="exampleInputDate">Date</label>
-    <input type="date" name="date_requested" class="form-control" id="exampleInputDate">
+    <input type="date" id="exampleInputDate" name="date_requested" class="form-control">
   </div>
 
   <div class="form-group col-md-6">
      <label for="inputTime">Time</label>
-      <select name="time_requested" class="form-control">
+      <select id="inputTime" name="time_requested" class="form-control">
         <option selected>Choose...</option>
         <option value="8am">8:00 am</option>
         <option value="9am">9:00 am</option>
@@ -50,14 +50,14 @@ layout: base
       <div class="col-form-label col-4 pt-0">Is your design course work?</div>
       <div class="col-sm">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
+          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios" value="option1" checked>
+          <label class="form-check-label" for="gridRadios">
             Yes
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
+          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios" value="option2">
+          <label class="form-check-label" for="gridRadios">
             No
           </label>
         </div>
@@ -66,7 +66,7 @@ layout: base
           
         <div class="form-group">
     <label for="exampleFormControlTextarea1">Brief Design Description</label>
-    <textarea name="message" class="form-control" rows="3"></textarea>
+    <textarea id="exampleFormControlTextarea1" name="message" class="form-control" rows="3"></textarea>
   </div>     
     
         
