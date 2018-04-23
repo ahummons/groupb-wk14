@@ -11,25 +11,25 @@ layout: base
 <form method="post" name="3Dprintingappt" action="form-to-email.php">
       
   <div class="form-group">
-    <label for="name">Full Name</label>
+    <label for="exampleInputEmail1">Full Name</label>
     <input type="text" name="name" class="form-control" placeholder="Full Name">
   </div>
           
   <div class="form-group">
-    <label for="visitor_email">E-mail Address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="me@my.dom.edu">
+    <label for="exampleInputPassword1">E-mail Address</label>
+    <input type="email" name="visitor_email" class="form-control" placeholder="me@my.dom.edu">
   </div>
      
 <div class="form-row">
     
   <div class="form-group col-md-6">
-    <label for="date_requested">Date</label>
-    <input type="date" name="date" class="form-control" id="exampleInputDate">
+    <label for="exampleInputDate">Date</label>
+    <input type="date" name="date_requested" class="form-control" id="exampleInputDate">
   </div>
 
   <div class="form-group col-md-6">
-     <label for="time_requested">Time</label>
-      <select id="inputTime" name="time" class="form-control">
+     <label for="inputTime">Time</label>
+      <select name="time_requested" class="form-control">
         <option selected>Choose...</option>
         <option value="8am">8:00 am</option>
         <option value="9am">9:00 am</option>
@@ -50,14 +50,14 @@ layout: base
       <div class="col-form-label col-4 pt-0">Is your design course work?</div>
       <div class="col-sm">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="classwork_1yes2no">
+          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
             Yes
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="classwork_1yes2no">
+          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
             No
           </label>
         </div>
@@ -65,8 +65,8 @@ layout: base
         </div>
           
         <div class="form-group">
-    <label for="message">Brief Design Description</label>
-    <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1">Brief Design Description</label>
+    <textarea name="message" class="form-control" rows="3"></textarea>
   </div>     
     
         
@@ -76,12 +76,8 @@ layout: base
 
 <!--Below is code to validate the script and prevent hacked entries-->
       <script src="scripts/gen_validatorv31.js">
-    // Code for validating the form
-    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
-    // for details
     var frmvalidator  = new Validator("3Dprintingappt");
     frmvalidator.addValidation("name","req","Please provide your name"); 
-    frmvalidator.addValidation("email","req","Please provide your email"); 
-    frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-        
+    frmvalidator.addValidation("visitor_email","req","Please provide your email"); 
+    frmvalidator.addValidation("visitor_email","email","Please enter a valid email address"); 
     </script>
