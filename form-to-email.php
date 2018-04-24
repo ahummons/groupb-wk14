@@ -26,7 +26,7 @@ if(IsInjected($visitor_email))
 
 $email_from = 'doakes@my.dom.edu';//<== update the email address
 $email_subject = "New Appointment Request";
-$email_body = "You have received a new request from the user $name.\n".
+$email_body = "You have received a new request from the user $name.\n"
 "Requester name: $name \n"
 "Requester email: $visitor_email \n"
 "Requested date: $date_requested \n"
