@@ -175,7 +175,7 @@ function edh_FinalShowMsg()
 }
 function edh_EnableOnPageDisplay(single_box)
 {
-	if(true == single_box)
+	if(true === single_box)
 	{
 		this.msgdisplay = new SingleBoxErrorDisplay();
 	}
@@ -207,7 +207,7 @@ function alert_showmsg(msgs)
     var first_elmnt=null;
     for(var m=0;m < msgs.length;m++)
     {
-        if(null == first_elmnt)
+        if(null === first_elmnt)
         {
             first_elmnt = msgs[m]["input_element"];
         }
@@ -294,7 +294,7 @@ function div_showmsg(msgs)
     var first_elmnt=null;
     for(var m in msgs)
     {
-        if(null == first_elmnt)
+        if(null === first_elmnt)
         {
             first_elmnt = msgs[m]["input_element"];
         }
@@ -391,19 +391,19 @@ function vset_validate()
 function validateEmail(email)
 {
     var splitted = email.match("^(.+)@(.+)$");
-    if(splitted == null) return false;
+    if(splitted === null) return false;
     if(splitted[1] != null )
     {
       var regexp_user=/^\"?[\w-_\.]*\"?$/;
-      if(splitted[1].match(regexp_user) == null) return false;
+      if(splitted[1].match(regexp_user) === null) return false;
     }
     if(splitted[2] != null)
     {
       var regexp_domain=/^[\w-\.]*\.[A-Za-z]{2,4}$/;
-      if(splitted[2].match(regexp_domain) == null) 
+      if(splitted[2].match(regexp_domain) === null) 
       {
 	    var regexp_ip =/^\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\]$/;
-	    if(splitted[2].match(regexp_ip) == null) return false;
+	    if(splitted[2].match(regexp_ip) === null) return false;
       }// if
       return true;
     }
@@ -419,7 +419,7 @@ function IsCheckSelected(objValue,chkValue)
 		var idxchk=-1;
 		for(var c=0;c < objcheck.length;c++)
 		{
-		   if(objcheck[c].value == chkValue)
+		   if(objcheck[c].value === chkValue)
 		   {
 		     idxchk=c;
 			 break;
@@ -427,7 +427,7 @@ function IsCheckSelected(objValue,chkValue)
 		}//for
 		if(idxchk>= 0)
 		{
-		  if(objcheck[idxchk].checked=="1")
+		  if(objcheck[idxchk].checked==="1")
 		  {
 		    selected=true;
 		  }
@@ -435,7 +435,7 @@ function IsCheckSelected(objValue,chkValue)
 	}
 	else
 	{
-		if(objValue.checked == "1")
+		if(objValue.checked === "1")
 		{
 			selected=true;
 		}//if
@@ -448,9 +448,9 @@ function TestDontSelectChk(objValue,chkValue,strError)
 	var pass = true;
 	pass = IsCheckSelected(objValue,chkValue)?false:true;
 
-	if(pass==false)
+	if(pass===false)
 	{
-     if(!strError || strError.length ==0) 
+     if(!strError || strError.length ===0) 
         { 
         	strError = "Can't Proceed as you selected "+objValue.name;  
         }//if			  
@@ -465,9 +465,9 @@ function TestShouldSelectChk(objValue,chkValue,strError)
 
 	pass = IsCheckSelected(objValue,chkValue)?true:false;
 
-	if(pass==false)
+	if(pass===false)
 	{
-     if(!strError || strError.length ==0) 
+     if(!strError || strError.length ===0) 
         { 
         	strError = "You should select "+objValue.name;  
         }//if			  
@@ -481,9 +481,9 @@ function TestRequiredInput(objValue,strError)
  var ret = true;
  var val = objValue.value;
  val = val.replace(/^\s+|\s+$/g,"");//trim
-    if(eval(val.length) == 0) 
+    if(eval(val.length) === 0) 
     { 
-       if(!strError || strError.length ==0) 
+       if(!strError || strError.length ===0) 
        { 
          strError = objValue.name + " : Required Field"; 
        }//if 
@@ -497,7 +497,7 @@ function TestMaxLen(objValue,strMaxLen,strError)
  var ret = true;
     if(eval(objValue.value.length) > eval(strMaxLen)) 
     { 
-      if(!strError || strError.length ==0) 
+      if(!strError || strError.length ===0) 
       { 
         strError = objValue.name + " : "+ strMaxLen +" characters maximum "; 
       }//if 
@@ -511,7 +511,7 @@ function TestMinLen(objValue,strMinLen,strError)
  var ret = true;
     if(eval(objValue.value.length) <  eval(strMinLen)) 
     { 
-      if(!strError || strError.length ==0) 
+      if(!strError || strError.length ===0) 
       { 
         strError = objValue.name + " : " + strMinLen + " characters minimum  "; 
       }//if               
@@ -527,7 +527,7 @@ function TestInputType(objValue,strRegExp,strError,strDefaultError)
     var charpos = objValue.value.search(strRegExp); 
     if(objValue.value.length > 0 &&  charpos >= 0) 
     { 
-     if(!strError || strError.length ==0) 
+     if(!strError || strError.length ===0) 
       { 
         strError = strDefaultError;
       }//if 
@@ -541,7 +541,7 @@ function TestEmail(objValue,strError)
 var ret = true;
      if(objValue.value.length > 0 && !validateEmail(objValue.value)	 ) 
      { 
-       if(!strError || strError.length ==0) 
+       if(!strError || strError.length ===0) 
        { 
           strError = objValue.name+": Enter a valid Email address "; 
        }//if                                               
@@ -561,7 +561,7 @@ var ret = true;
 	  else
 	  if(eval(objValue.value) >=  eval(strLessThan)) 
 	  { 
-	    if(!strError || strError.length ==0) 
+	    if(!strError || strError.length ===0) 
 	    { 
 	      strError = objValue.name + " : value should be less than "+ strLessThan; 
 	    }//if               
@@ -581,7 +581,7 @@ var ret = true;
 	 else
      if(eval(objValue.value) <=  eval(strGreaterThan)) 
       { 
-        if(!strError || strError.length ==0) 
+        if(!strError || strError.length ===0) 
         { 
           strError = objValue.name + " : value should be greater than "+ strGreaterThan; 
         }//if               
@@ -596,7 +596,7 @@ var ret = true;
     if( objValue.value.length > 0 && 
         !objValue.value.match(strRegExp) ) 
     { 
-      if(!strError || strError.length ==0) 
+      if(!strError || strError.length ===0) 
       { 
         strError = objValue.name+": Invalid characters found "; 
       }//if                                                               
@@ -608,14 +608,14 @@ return ret;
 function TestDontSelect(objValue,dont_sel_index,strError)
 {
 var ret = true;
-    if(objValue.selectedIndex == null) 
+    if(objValue.selectedIndex === null) 
     { 
       sfm_show_error_msg("ERROR: dontselect command for non-select Item"); 
       ret =  false; 
     } 
-    if(objValue.selectedIndex == eval(dont_sel_index)) 
+    if(objValue.selectedIndex === eval(dont_sel_index)) 
     { 
-     if(!strError || strError.length ==0) 
+     if(!strError || strError.length ===0) 
       { 
       strError = objValue.name+": Please Select one option "; 
       }//if                                                               
@@ -636,9 +636,9 @@ function TestSelectOneRadio(objValue,strError)
 		break;
 	  }
 	}
-	if(false == one_selected)
+	if(false === one_selected)
 	{
-      if(!strError || strError.length ==0) 
+      if(!strError || strError.length ===0) 
        {
 	    strError = "Please select one option from "+objValue.name;
 	   }	
@@ -773,8 +773,8 @@ function VWZ_IsListItemSelected(listname,value)
 {
  for(var i=0;i < listname.options.length;i++)
  {
-  if(listname.options[i].selected == true &&
-   listname.options[i].value == value) 
+  if(listname.options[i].selected === true &&
+   listname.options[i].value === value) 
    {
      return true;
    }
@@ -787,8 +787,8 @@ function VWZ_IsChecked(objcheck,value)
  {
      for(var c=0;c < objcheck.length;c++)
      {
-       if(objcheck[c].checked == "1" && 
-	     objcheck[c].value == value)
+       if(objcheck[c].checked === "1" && 
+	     objcheck[c].value === value)
        {
         return true; 
        }
@@ -796,7 +796,7 @@ function VWZ_IsChecked(objcheck,value)
  }
  else
  {
-  if(objcheck.checked == "1" )
+  if(objcheck.checked === "1" )
    {
     return true; 
    }    
