@@ -73,11 +73,3 @@ layout: base
   <button type="submit" name="submit" class="btn btn-dark" style="background-color: #F65A35; color: #ffffff;">Submit</button>
     
       </form>
-
-<!--Below is code to validate the script and prevent hacked entries-->
-   <script src="scripts/gen_validatorv31.js">
-    var frmvalidator  = new Validator("3Dprintingappt");
-    frmvalidator.addValidation("name","req","Please provide your name"); 
-    frmvalidator.addValidation("visitor_email","req","Please provide your email"); 
-    frmvalidator.addValidation("visitor_email","email","Please enter a valid email address"); 
-</script>
