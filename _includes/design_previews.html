@@ -1,4 +1,8 @@
 {% for design in site.designs %}
-<h2>{{ design.title }}</h2>
+<h2><a href="/design/design.html" title="design progress">{{ design.title }}</a></h2>
 <p>{{ design.summary }}</p>
+{% endfor %}
+{% for usability in site.designs %}
+<h2><a href="/design/usability.html" title="usability study">{{ usability.title }}</a></h2>
+<p>{{ usability.summary }}</p>
 {% endfor %}
