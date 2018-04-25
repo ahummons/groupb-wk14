@@ -1,27 +1,28 @@
 ---
 layout: base
+title: "Make an Appointment"
 ---
 
- <h2>Make an Appointment</h2>
-      
+ <h2>{{page.title}}</h2>
+
       <p>Book an appointment online by filling out the form below.</p>
       <p>Don't forget to describe the size of your design so we can schedule your appointment accordingly.</p>
-          
+
 <!-- HTML form code starts here-->
 <form method="post" name="3Dprintingappt" action="/form-to-email.php">
-      
+
   <div class="form-group">
     <label for="exampleInputEmail1">Full Name</label>
     <input type="text" id="exampleInputEmail1" name="name" class="form-control" placeholder="Full Name">
   </div>
-          
+
   <div class="form-group">
     <label for="exampleInputPassword1">E-mail Address</label>
     <input type="email" id="exampleInputPassword1" name="visitor_email" class="form-control" placeholder="me@my.dom.edu">
   </div>
-     
+
 <div class="form-row">
-    
+
   <div class="form-group col-md-6">
     <label for="exampleInputDate">Date</label>
     <input type="date" id="exampleInputDate" name="date_requested" class="form-control">
@@ -45,7 +46,7 @@ layout: base
       </select>
     </div>
     </div>
-          
+
         <div class="row">
       <div class="col-form-label col-4 pt-0">Is your design course work?</div>
       <div class="col-sm">
@@ -63,14 +64,13 @@ layout: base
         </div>
         </div>
         </div>
-          
+
         <div class="form-group">
     <label for="exampleFormControlTextarea1">Brief Design Description</label>
     <textarea id="exampleFormControlTextarea1" name="message" class="form-control" rows="3"></textarea>
-  </div>     
-    
-        
-  <button type="submit" name="submit" class="btn btn-dark" style="background-color: #F65A35; color: #ffffff;">Submit</button>
-    
-      </form>
+  </div>
 
+
+  <button type="submit" name="submit" class="btn btn-dark" style="background-color: #F65A35; color: #ffffff;">Submit</button>
+
+      </form>
