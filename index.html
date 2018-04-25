@@ -1,8 +1,9 @@
 ---
+title: "Welcome to the Dominican University 3D printing lab"
 layout: base
 ---
 
-<h3>Welcome to the Dominican University 3D printing lab.</h3>
+<h3>{{ title }}</h3>
 <table>
 <tr>
 <td>
@@ -14,4 +15,5 @@ layout: base
 </td>
 </tr>
 </table>
-<p>For information on our design process, <a href="design.html" title="design">click here</a>.</p>
+
+{% include design_previews.html %}
