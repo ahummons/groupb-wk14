@@ -1,4 +1,4 @@
-{% for design in site.designs %}
-<h2><a href="{{ design.url }}">{{ design.title }}</a></h2>
-<p>{{ design.summary }}</p>
+{% for designs in site.designs %}
+<h2><a href="{{ designs.url }}">{{ designs.title }}</a></h2>
+<p>{{ designs.summary }}</p>
 {% endfor %}
