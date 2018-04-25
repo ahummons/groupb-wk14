@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <style type="text/css">
+  <style>
     html,
     body {
       margin: 0;
       border: 0;
-      width: 100%;
     }
 
     body {
@@ -22,24 +21,23 @@
     h1 {
       text-align: center;
     }
-    
+
     img {
       padding: 5px;
     }
-    
+
     .mood {
      float: right;
      margin: 4%;
     }
-    
+
     .thumbnail {
-    width: 100%;
     text-align: center;
     }
-    
+
     .carousel-caption {
      background: rgb(115, 115, 115);
-      
+
     position: relative;
     display: none;
     -webkit-transition: 0.8s ease-in-out left;
@@ -56,7 +54,11 @@
     #main {
       margin: 0 auto;
     }
-    
+
+    .fixedsize{
+      width: 200px;
+    }
+
     .rotateimg90 {
   -webkit-transform:rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -69,7 +71,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  
+
   <title>3D Printing @ the Rebecca Crown Library</title>
 </head>
 
@@ -87,12 +89,12 @@
     <!-- Script for form validation -->
     <script src="https://domlis786.github.io/groupb-wk14/scripts/gen_validatorv31.js"></script>
 
-    
-<header>
-    <figure><img src="images/RCLibrary.jpg" alt="Rebecca Crown Library Staircase" width="100%"></figure>
 
+<header>
+    <img src="images/RCLibrary.jpg" alt="Rebecca Crown Library Staircase">
     <h1>Rebecca Crown Library 3D Printing Services</h1>
 </header>
+
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1E3B6D">
       <a class="navbar-brand" href="index.html" title="home">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -118,10 +120,8 @@
 </nav>
 
 <main class="row">
-      <section class="col-md-8" style="padding: 20px; word-wrap:break-word;">
-
+    <section class="col-md-8" style="padding: 20px; word-wrap:break-word;">
 {{content}}
-        
       </section>
       <aside class="col-sm-4" style="padding: 20px">
         <h2>Gallery</h2>
@@ -129,31 +129,28 @@
           <p>
             Here are some current projects from courses offered at Dominican University.
           </p>
-          <figure><img src="https://libapps.s3.amazonaws.com/accounts/13369/images/Rex.JPG" alt="example 1" width="300"></figure>
+          <img src="https://libapps.s3.amazonaws.com/accounts/13369/images/Rex.JPG" alt="example 1" class="fixedwidth">
           <br>
-          <figure><img src="https://libapps.s3.amazonaws.com/accounts/13369/images/joffcrown.JPG" alt="example 2" width="300"></figure>
-
+          <img src="https://libapps.s3.amazonaws.com/accounts/13369/images/joffcrown.JPG" alt="example 2" class="fixedwidth">
           </div>
-       </aside>
+    </aside>
 </main>
+
 <footer class="container-fluid" style="background-color: #17264D">
       <div class="row" id="footer">
         <div class="col-sm-4">
-          <a>
-            <figure><img src="images/DomLogo.jpg" alt="Dominican shield logo" style="width: 200px;"></figure>
+          <a href="http://www.dom.edu" title="dominicanwebsite">
+            <img src="images/DomLogo.jpg" alt="Dominican shield logo" class="fixedwidth">
           </a>
         </div>
-
         <div class="col-sm-4">
           <h4>Rebecca Crown Library</h4>
-
           <p>7900 West Division St.
             <br /> River Forest, IL 60305
             <br /> Telephone:
             <a href="tel:708-524-6500">708-524-6500</a>
           </p>
         </div>
-
         <div class="col-sm-4">
           <h4>Hours</h4>
           <p>Mon-Thu: 8am-7pm
@@ -161,9 +158,9 @@
             <br /> Sat: 10am-7pm
             <br /> Sun: 10am-7pm</p>
         </div>
-<div>
-  <p>Copyright 2018 LIS786 April Hummons, Danielle Oakes, Karla Alba, Katherine D'Antico under the instruction of Brodie Austin</p>
-</div>
+        <div>
+          <p>Copyright 2018 LIS786 April Hummons, Danielle Oakes, Karla Alba, Katherine D'Antico under the instruction of Brodie Austin</p>
+        </div>
       </div>
   </footer>
   </div>
