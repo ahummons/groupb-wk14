@@ -1,5 +1,5 @@
-{% for design in site.designs %}
-  <h3>{{ design.title }}</h3>
-  <p>{{ design.summary }}</p>
-  <a href="{{ design.url }}">Learn more</a>
+{% for page in site.designs %}
+  <h3>{{ page.title }}</h3>
+  <p>{{ page.summary }}</p>
+  <a href="{{ page.url }}">Learn more</a>
 {% endfor %}
