@@ -1,4 +1,5 @@
 {% for design in site.designs %}
-<h2><a href="{{ design.url }}">{{ design.title }}</a></h2>
-<p>{{ design.summary }}</p>
+  <h3>{{ design.title }}</h3>
+  <p>{{ design.summary }}</p>
+  <a href="{{ design.url }}">Learn more</a>
 {% endfor %}
