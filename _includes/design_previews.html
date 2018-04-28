@@ -1,5 +1,6 @@
 {% for design in site.designs %}
-  <h4>{{ design.title }}</h4>
-  <p>{{ design.summary }}</p>
-  <a href=" {{design.url}} ">Learn more</a>
+<p>Follow the design process of this microsite.</p>
+<ul>
+  <li><a href="{{base.url}}{{design.url}}" title="design and process page">{{ design.title }}</a></li>
+</ul>
 {% endfor %}
