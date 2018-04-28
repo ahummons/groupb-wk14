@@ -83,6 +83,28 @@
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+    .maincolumn {
+  padding: 20px;
+  word-wrap:break-word;
+    }
+
+    .gallerybg {
+  background-color: #F65A35;
+    }
+
+    .footerbg {
+      background-color: #17264D;
+    }
+
+    .navbarbg {
+      background-color: #1E3B6D;
+    }
+
+    .buttonsettings {
+      background-color: #F65A35;
+      color: #ffffff;
+    }
+
   </style>
 
   <!-- Bootstrap CSS -->
@@ -111,7 +133,7 @@
     <img src="https://domlis786.github.io/groupb-wk14/images/RCLibrary2.jpg" alt="Rebecca Crown Library Staircase">
 </header>
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1E3B6D">
+<nav class="navbar navbar-expand-lg navbar-dark" "navbarbg">
       <a class="navbar-brand" href="{{site.baseurl}}/index.html" title="home">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -136,12 +158,12 @@
 </nav>
 
 <main class="row">
-    <section class="col-md-8" style="padding: 20px; word-wrap:break-word;">
+    <section class="col-md-8" "maincolumn">
     {{content}}
       </section>
-      <aside class="col-sm-4" style="padding: 20px">
+      <aside class="col-sm-4" "maincolumn">
         <h2>Gallery</h2>
-          <div class="container container-gallery" style="background-color: #F65A35">
+          <div class="container container-gallery" "gallerybg">
           <p>
             Here are some current projects from courses offered at Dominican University.
           </p>
@@ -152,7 +174,7 @@
     </aside>
 </main>
 
-<footer class="container-fluid" style="background-color: #17264D">
+<footer class="container-fluid" "footerbg">
       <div class="row" id="footer">
         <div class="col-sm-4">
           <a href="http://www.dom.edu" title="dominicanwebsite">
