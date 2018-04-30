@@ -1,74 +1,76 @@
 ---
 layout: base
+title: "Make an Appointment"
 ---
 
- <h2>Make an Appointment</h2>
-      
+ <h2>{{page.title}}</h2>
+
       <p>Book an appointment online by filling out the form below.</p>
       <p>Don't forget to describe the size of your design so we can schedule your appointment accordingly.</p>
-          
-      
-      <form>
+
+<!-- HTML form code starts here-->
+<form method="post" name="3Dprintingappt" action="{{site.baseurl}}/form-to-email.php">
+
   <div class="form-group">
     <label for="exampleInputEmail1">Full Name</label>
-    <input type="email" class="form-control" placeholder="Full Name">
+    <input type="text" id="exampleInputEmail1" name="name" class="form-control" placeholder="Full Name">
   </div>
-          
+
   <div class="form-group">
     <label for="exampleInputPassword1">E-mail Address</label>
-    <input type="emailaddress" class="form-control" id="exampleInputPassword1" placeholder="me@my.dom.edu">
+    <input type="email" id="exampleInputPassword1" name="visitor_email" class="form-control" placeholder="me@my.dom.edu">
   </div>
-     
+
 <div class="form-row">
-    
+
   <div class="form-group col-md-6">
     <label for="exampleInputDate">Date</label>
-    <input type="date" class="form-control" id="exampleInputDate">
+    <input type="date" id="exampleInputDate" name="date_requested" class="form-control">
   </div>
 
   <div class="form-group col-md-6">
      <label for="inputTime">Time</label>
-      <select id="inputTime" class="form-control">
+      <select id="inputTime" name="time_requested" class="form-control">
         <option selected>Choose...</option>
-        <option>8:00 am</option>
-        <option>9:00 am</option>
-        <option>10:00 am</option>
-        <option>11:00 am</option>
-        <option>12:00 pm</option>
-        <option>1:00 pm</option>
-        <option>2:00 pm</option>
-        <option>3:00 pm</option>
-        <option>4:00 pm</option>
-        <option>5:00 pm</option>
-        <option>6:00 pm</option>
+        <option value="8am">8:00 am</option>
+        <option value="9am">9:00 am</option>
+        <option value="10am">10:00 am</option>
+        <option value="11am">11:00 am</option>
+        <option value="12pm">12:00 pm</option>
+        <option value="1pm">1:00 pm</option>
+        <option value="2pm">2:00 pm</option>
+        <option value="3pm">3:00 pm</option>
+        <option value="4pm">4:00 pm</option>
+        <option value="5pm">5:00 pm</option>
+        <option value="6pm">6:00 pm</option>
       </select>
     </div>
     </div>
-          
+
         <div class="row">
-      <legend class="col-form-label col-4 pt-0">Is your design course work?</legend>
+      <div class="col-form-label col-4 pt-0">Is your design course work?</div>
       <div class="col-sm">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios1" value="option1" checked>
           <label class="form-check-label" for="gridRadios1">
             Yes
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="classwork_1yes2no" id="gridRadios2" value="option2">
           <label class="form-check-label" for="gridRadios2">
             No
           </label>
         </div>
         </div>
         </div>
-          
+
         <div class="form-group">
     <label for="exampleFormControlTextarea1">Brief Design Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>     
-    
-        
-  <button type="submit" class="btn btn-dark" style="background-color: #F65A35" "color: white">Submit</button>
-    
+    <textarea id="exampleFormControlTextarea1" name="message" class="form-control" rows="3"></textarea>
+  </div>
+
+
+  <button type="submit" name="submit" class="btn btn-dark buttonsettings">Submit</button>
+
       </form>
